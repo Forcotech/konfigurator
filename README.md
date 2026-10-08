@@ -1,6 +1,7 @@
 # ForCoTech Schallhauben-Konfigurator
 
-Live: https://forcotech.github.io/konfigurator/
+Live (Deutsch): https://forcotech.github.io/konfigurator/
+Live (English): https://forcotech.github.io/konfigurator/en/
 
 © Silent-Engineering di Romolo Vicari · Via Trento 22 · 23875 Osnago (LC) · Italien.
 Alle Rechte vorbehalten. Konfigurator, Berechnungsverfahren und Gestaltung sind urheberrechtlich geschützt.
