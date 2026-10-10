@@ -7,9 +7,9 @@
 <title>Schallhauben-Konfigurator für Wärmepumpen, Kälteanlagen und PV-Wechselrichter | ForCoTech</title>
 <style>
 :root{
-  --accent:#0f7c80; --accent-d:#0a5b5e; --accent-l:#e3f2f2;
-  --red:#c8202f; --ink:#13232b; --muted:#5d6f78; --line:#d9e2e5;
-  --bg:#f5f7f7; --card:#ffffff; --warn:#a15c00; --warn-l:#fff4e2; --ok:#1d7a3e;
+  --accent:#c8202f; --accent-d:#9e1724; --accent-l:#fdecee;
+  --red:#c8202f; --ink:#1a1a1a; --muted:#5c5c5c; --line:#e6e1e1;
+  --bg:#f8f6f6; --card:#ffffff; --warn:#a15c00; --warn-l:#fff4e2; --ok:#1d7a3e;
   --r:10px;
 }
 *{box-sizing:border-box}
@@ -32,7 +32,7 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-u
 .num{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:700;flex:none}
 .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .tile{position:relative;border:1.5px solid var(--line);border-radius:8px;padding:10px 10px 9px;cursor:pointer;background:#fff;transition:border-color .15s,background .15s}
-.tile:hover{border-color:#9cc5c6}
+.tile:hover{border-color:#e8a1a8}
 .tile input{position:absolute;opacity:0;pointer-events:none}
 .tile b{display:block;font-size:13.5px}
 .tile span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
@@ -58,24 +58,24 @@ label.f input:focus,label.f select:focus,label.f textarea:focus{outline:2px soli
 .chk input{margin-top:3px;accent-color:var(--accent)}
 .out{position:sticky;top:12px}
 @media (max-width:900px){.out{position:static}}
-.view{background:linear-gradient(#fbfdfd,#eef3f3);border:1px solid var(--line);border-radius:var(--r);padding:6px}
+.view{background:linear-gradient(#fdfbfb,#f6f1f1);border:1px solid var(--line);border-radius:var(--r);padding:6px}
 .view svg{display:block;width:100%;height:auto}
 .kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
 .kpi{background:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 11px}
 .kpi small{display:block;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
 .kpi b{font-size:16px}
 .price{margin-top:12px;background:var(--ink);color:#fff;border-radius:var(--r);padding:14px 16px}
-.price small{color:#b9c7cc;font-size:12px}
+.price small{color:#cfc8c8;font-size:12px}
 .price .v{font-size:24px;font-weight:800;margin:2px 0}
-.acou{margin-top:10px;border-radius:8px;padding:10px 12px;font-size:13.5px;background:var(--accent-l);border:1px solid #bfdede}
-.acou.bad{background:#fdeaea;border-color:#f1b9b9}
+.acou{margin-top:10px;border-radius:8px;padding:10px 12px;font-size:13.5px;background:#f6f4f4;border:1px solid var(--line)}
+.acou.bad{background:#fdeaea;border-color:#e08a93;border-left:4px solid var(--red)}
 .light{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:0}
 .acou.ex{background:#fff6e5;border-color:#f0c36b}
 .acou.ex ul{margin:6px 0 0;padding-left:18px}
 .acou.ex li{margin:2px 0}
-.exbadge{display:inline-block;background:#f0a500;color:#13232b;font-weight:800;font-size:11px;padding:1px 6px;border-radius:4px;margin-right:6px}
+.exbadge{display:inline-block;background:#f0a500;color:#1a1a1a;font-weight:800;font-size:11px;padding:1px 6px;border-radius:4px;margin-right:6px}
 svg .szone{fill:#f0a500;fill-opacity:.08;stroke:#d08a00;stroke-width:1.3;stroke-dasharray:7 5}
-svg .vent{fill:#13232b;fill-opacity:.55}
+svg .vent{fill:#1a1a1a;fill-opacity:.55}
 .acou.warn{background:var(--warn-l);border-color:#f0d3a3}
 .acou table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px}
 .acou td{padding:2px 0}
@@ -88,7 +88,7 @@ svg .vent{fill:#13232b;fill-opacity:.55}
 .foot{font-size:11.5px;color:var(--muted);margin-top:10px}
 #lead{scroll-margin-top:12px}
 .err{color:var(--red);font-size:13px;margin-top:8px;display:none}
-.privacy{margin-top:12px;border:1px solid var(--line);border-radius:8px;background:#fafcfc;font-size:12.5px;color:var(--muted)}
+.privacy{margin-top:12px;border:1px solid var(--line);border-radius:8px;background:#fcfafa;font-size:12.5px;color:var(--muted)}
 .privacy summary{cursor:pointer;padding:9px 12px;font-weight:600;color:var(--ink)}
 .privacy div{padding:0 12px 6px}
 .privacy p{margin:0 0 8px}
@@ -115,18 +115,18 @@ svg .hid{opacity:.3}
 .prodlink{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--accent);text-decoration:none}
 .prodlink:hover{text-decoration:underline}
 .prodlink+.prodlink{margin-left:16px}
-.thanks{display:none;padding:18px;border-radius:var(--r);background:var(--accent-l);border:1px solid #bfdede}
-svg .bk{fill:#0f7c80;fill-opacity:.06;stroke:#0f7c80;stroke-opacity:.35;stroke-width:1}
-svg .fr{fill:#0f7c80;fill-opacity:.16;stroke:#0a5b5e;stroke-width:1.4;stroke-linejoin:round}
-svg .tp{fill:#0f7c80;fill-opacity:.24;stroke:#0a5b5e;stroke-width:1.4;stroke-linejoin:round}
-svg .ku{fill:#13232b;fill-opacity:.12;stroke:#13232b;stroke-width:1.3;stroke-linejoin:round}
-svg .tube{fill:#fff;fill-opacity:.85;stroke:#13232b;stroke-opacity:.55;stroke-width:.8}
-svg .unitl{fill:none;stroke:#c8202f;stroke-width:1.2;stroke-dasharray:5 4}
-svg .door{fill:#fff;fill-opacity:.35;stroke:#0a5b5e;stroke-width:1.2}
-svg .lam{stroke:#0a5b5e;stroke-opacity:.55;stroke-width:1}
-svg .sh{fill:#13232b;fill-opacity:.07}
-svg .dim{font:600 12px system-ui,sans-serif;fill:#13232b}
-svg .air{stroke:#5d6f78;stroke-width:1.4;fill:none;marker-end:url(#arr)}
+.thanks{display:none;padding:18px;border-radius:var(--r);background:var(--accent-l);border:1px solid #f3c4c9}
+svg .bk{fill:#c8202f;fill-opacity:.06;stroke:#c8202f;stroke-opacity:.35;stroke-width:1}
+svg .fr{fill:#c8202f;fill-opacity:.16;stroke:#9e1724;stroke-width:1.4;stroke-linejoin:round}
+svg .tp{fill:#c8202f;fill-opacity:.24;stroke:#9e1724;stroke-width:1.4;stroke-linejoin:round}
+svg .ku{fill:#1a1a1a;fill-opacity:.12;stroke:#1a1a1a;stroke-width:1.3;stroke-linejoin:round}
+svg .tube{fill:#fff;fill-opacity:.85;stroke:#1a1a1a;stroke-opacity:.55;stroke-width:.8}
+svg .unitl{fill:none;stroke:#1a1a1a;stroke-width:1.2;stroke-dasharray:5 4}
+svg .door{fill:#fff;fill-opacity:.35;stroke:#9e1724;stroke-width:1.2}
+svg .lam{stroke:#9e1724;stroke-opacity:.55;stroke-width:1}
+svg .sh{fill:#1a1a1a;fill-opacity:.07}
+svg .dim{font:600 12px system-ui,sans-serif;fill:#1a1a1a}
+svg .air{stroke:#5c5c5c;stroke-width:1.4;fill:none;marker-end:url(#arr)}
 @media print{
   body{background:#fff}
   .cfg,#lead,.btns{display:none!important}
@@ -150,17 +150,17 @@ svg .air{stroke:#5d6f78;stroke-width:1.4;fill:none;marker-end:url(#arr)}
 <meta property="og:url" content="https://forcotech.github.io/konfigurator/">
 <meta property="og:locale" content="de_DE">
 <style id="seo-css">
-.seo-ov{margin-top:24px;background:var(--card,#fff);border:1px solid var(--line,#d9e2e5);border-radius:var(--r,10px);padding:4px 16px}
-.seo-ov>summary{cursor:pointer;padding:10px 0;font-weight:700;color:var(--accent,#0f7c80)}
+.seo-ov{margin-top:24px;background:var(--card,#fff);border:1px solid var(--line,#e6e1e1);border-radius:var(--r,10px);padding:4px 16px}
+.seo-ov>summary{cursor:pointer;padding:10px 0;font-weight:700;color:var(--accent,#c8202f)}
 .seo-ov h2{font-size:17px;margin:6px 0 4px}.seo-ov h3{font-size:15px;margin:16px 0 6px}
-.seo-ov p{font-size:13px;color:var(--muted,#5d6f78);margin:0 0 8px;max-width:80ch}
+.seo-ov p{font-size:13px;color:var(--muted,#5c5c5c);margin:0 0 8px;max-width:80ch}
 .seo-tw{overflow-x:auto;margin:0 0 12px}
 .seo-ov table{border-collapse:collapse;font-size:12.5px;width:100%;min-width:760px}
-.seo-ov th,.seo-ov td{border-bottom:1px solid var(--line,#d9e2e5);padding:6px 8px;text-align:left;vertical-align:top}
-.seo-ov th{background:var(--accent-l,#e3f2f2);font-weight:700}
+.seo-ov th,.seo-ov td{border-bottom:1px solid var(--line,#e6e1e1);padding:6px 8px;text-align:left;vertical-align:top}
+.seo-ov th{background:var(--accent-l,#fdecee);font-weight:700}
 .seo-ov td.n{white-space:nowrap;font-variant-numeric:tabular-nums}
-.seo-about{font-size:12.5px;color:var(--muted,#5d6f78);margin:16px 0 0;max-width:90ch}
-.seo-about a{color:var(--accent,#0f7c80)}
+.seo-about{font-size:12.5px;color:var(--muted,#5c5c5c);margin:16px 0 0;max-width:90ch}
+.seo-about a{color:var(--accent,#c8202f)}
 </style>
 <!-- /seo:head -->
 <!-- seo:jsonld -->

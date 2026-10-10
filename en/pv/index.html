@@ -7,9 +7,9 @@
 <title>Acoustic Enclosures for PV Inverters – Huawei, SMA, Fronius, Sungrow, SolarEdge and more | ForCoTech</title>
 <style>
 :root{
-  --accent:#0f7c80; --accent-d:#0a5b5e; --accent-l:#e3f2f2;
-  --red:#c8202f; --blue:#2563c9; --ink:#13232b; --muted:#5d6f78; --line:#d9e2e5;
-  --bg:#f5f7f7; --card:#ffffff; --warn-l:#fff4e2; --ok:#1d7a3e;
+  --accent:#c8202f; --accent-d:#9e1724; --accent-l:#fdecee;
+  --red:#c8202f; --blue:#2563c9; --ink:#1a1a1a; --muted:#5c5c5c; --line:#e6e1e1;
+  --bg:#f8f6f6; --card:#ffffff; --warn-l:#fff4e2; --ok:#1d7a3e;
   --r:10px;
   color-scheme:light;
 }
@@ -61,7 +61,7 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-u
 .spec{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-size:13px;margin:0}
 .spec dt{color:var(--muted)}
 .spec dd{margin:0;font-variant-numeric:tabular-nums;text-align:right}
-.v3d{position:relative;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab;border-radius:8px;background:linear-gradient(#fbfdfd,#f1f5f5)}
+.v3d{position:relative;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab;border-radius:8px;background:linear-gradient(#fdfbfb,#f6f2f2)}
 .v3d:active{cursor:grabbing}
 .v3d svg{display:block;width:100%;height:200px}
 .v3d.big svg{height:380px}
@@ -105,13 +105,13 @@ label.f{display:block;font-size:12.5px;color:var(--muted);font-weight:600;margin
 label.f input,label.f textarea,label.f select{display:block;width:100%;margin-top:3px;padding:7px 9px;border:1px solid var(--line);border-radius:7px;font:inherit;color:var(--ink);background:#fff}
 .chk{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;margin:10px 0 6px;cursor:pointer}
 .chk input{margin-top:3px;accent-color:var(--accent)}
-.privacy{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:#fafcfc;font-size:12px;color:var(--muted)}
+.privacy{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:#fcfafa;font-size:12px;color:var(--muted)}
 .privacy summary{cursor:pointer;padding:8px 10px;font-weight:600;color:var(--ink)}
 .privacy div{padding:0 10px 4px}
 .privacy p{margin:0 0 6px}
 .privacy a,.chk a{color:var(--accent)}
 .err{color:var(--red);font-size:13px;margin-top:6px}
-.thanks{padding:14px;border-radius:8px;background:var(--accent-l);border:1px solid #bfdede;font-size:14px}
+.thanks{padding:14px;border-radius:8px;background:var(--accent-l);border:1px solid #f3c4c9;font-size:14px}
 .readybox{margin-top:10px;padding:12px;border-radius:8px;background:var(--warn-l);border:1px solid #f0d3a3;font-size:13px}
 .readybox textarea{width:100%;margin-top:8px;font:12px ui-monospace,Menlo,Consolas,monospace;border:1px solid var(--line);border-radius:6px;padding:8px}
 .count{font-size:13px;color:var(--muted)}
@@ -129,18 +129,18 @@ label.f input,label.f textarea,label.f select{display:block;width:100%;margin-to
 .copy{margin-top:24px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);text-align:center;line-height:1.6}
 [hidden]{display:none!important}
 /* 3D-Skizze */
-svg .wl{fill:#9aa9af;fill-opacity:.22;stroke:#9aa9af;stroke-width:1}
-svg .gd{fill:#9aa9af;fill-opacity:.16;stroke:none}
-svg .fr{fill:#0f7c80;fill-opacity:.10;stroke:#0a5b5e;stroke-width:1.3;stroke-linejoin:round;vector-effect:non-scaling-stroke}
-svg .inv{fill:#13232b;fill-opacity:.55;stroke:#13232b;stroke-width:1;vector-effect:non-scaling-stroke}
-svg .sh{fill:#5d6f78;fill-opacity:.85;stroke:none}
-svg .sil{fill:#13232b;fill-opacity:.05;stroke:#13232b;stroke-opacity:.45;stroke-width:1;stroke-dasharray:4 3;vector-effect:non-scaling-stroke}
+svg .wl{fill:#a3a3a3;fill-opacity:.22;stroke:#a3a3a3;stroke-width:1}
+svg .gd{fill:#a3a3a3;fill-opacity:.16;stroke:none}
+svg .fr{fill:#c8202f;fill-opacity:.10;stroke:#9e1724;stroke-width:1.3;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+svg .inv{fill:#1a1a1a;fill-opacity:.55;stroke:#1a1a1a;stroke-width:1;vector-effect:non-scaling-stroke}
+svg .sh{fill:#5c5c5c;fill-opacity:.85;stroke:none}
+svg .sil{fill:#1a1a1a;fill-opacity:.05;stroke:#1a1a1a;stroke-opacity:.45;stroke-width:1;stroke-dasharray:4 3;vector-effect:non-scaling-stroke}
 svg .in{fill:#2563c9;fill-opacity:.18;stroke:#2563c9;stroke-opacity:.6;stroke-width:1;vector-effect:non-scaling-stroke}
-svg .tb{fill:#fff;stroke:#13232b;stroke-opacity:.55;stroke-width:.8;vector-effect:non-scaling-stroke}
-svg .dr{stroke:#0a5b5e;stroke-width:1.2;stroke-dasharray:6 4;vector-effect:non-scaling-stroke}
+svg .tb{fill:#fff;stroke:#1a1a1a;stroke-opacity:.55;stroke-width:.8;vector-effect:non-scaling-stroke}
+svg .dr{stroke:#9e1724;stroke-width:1.2;stroke-dasharray:6 4;vector-effect:non-scaling-stroke}
 svg .ai{stroke:#2563c9;fill:#2563c9;stroke-width:2;vector-effect:non-scaling-stroke}
 svg .ao{stroke:#c8202f;fill:#c8202f;stroke-width:2;vector-effect:non-scaling-stroke}
-svg .dm{font-weight:650;font-family:system-ui,sans-serif;fill:#13232b;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+svg .dm{font-weight:650;font-family:system-ui,sans-serif;fill:#1a1a1a;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
 </style>
 <!-- seo:head -->
 <meta name="description" content="Acoustic enclosures for PV inverters: wall-mounted front enclosures and free-standing housings with mounting shelter, for 1 to 5 units, approx. −15 or −20 dB(A), with budget prices.">
@@ -156,17 +156,17 @@ svg .dm{font-weight:650;font-family:system-ui,sans-serif;fill:#13232b;paint-orde
 <meta property="og:url" content="https://forcotech.github.io/konfigurator/en/pv/">
 <meta property="og:locale" content="en_GB">
 <style id="seo-css">
-.seo-ov{margin-top:24px;background:var(--card,#fff);border:1px solid var(--line,#d9e2e5);border-radius:var(--r,10px);padding:4px 16px}
-.seo-ov>summary{cursor:pointer;padding:10px 0;font-weight:700;color:var(--accent,#0f7c80)}
+.seo-ov{margin-top:24px;background:var(--card,#fff);border:1px solid var(--line,#e6e1e1);border-radius:var(--r,10px);padding:4px 16px}
+.seo-ov>summary{cursor:pointer;padding:10px 0;font-weight:700;color:var(--accent,#c8202f)}
 .seo-ov h2{font-size:17px;margin:6px 0 4px}.seo-ov h3{font-size:15px;margin:16px 0 6px}
-.seo-ov p{font-size:13px;color:var(--muted,#5d6f78);margin:0 0 8px;max-width:80ch}
+.seo-ov p{font-size:13px;color:var(--muted,#5c5c5c);margin:0 0 8px;max-width:80ch}
 .seo-tw{overflow-x:auto;margin:0 0 12px}
 .seo-ov table{border-collapse:collapse;font-size:12.5px;width:100%;min-width:760px}
-.seo-ov th,.seo-ov td{border-bottom:1px solid var(--line,#d9e2e5);padding:6px 8px;text-align:left;vertical-align:top}
-.seo-ov th{background:var(--accent-l,#e3f2f2);font-weight:700}
+.seo-ov th,.seo-ov td{border-bottom:1px solid var(--line,#e6e1e1);padding:6px 8px;text-align:left;vertical-align:top}
+.seo-ov th{background:var(--accent-l,#fdecee);font-weight:700}
 .seo-ov td.n{white-space:nowrap;font-variant-numeric:tabular-nums}
-.seo-about{font-size:12.5px;color:var(--muted,#5d6f78);margin:16px 0 0;max-width:90ch}
-.seo-about a{color:var(--accent,#0f7c80)}
+.seo-about{font-size:12.5px;color:var(--muted,#5c5c5c);margin:16px 0 0;max-width:90ch}
+.seo-about a{color:var(--accent,#c8202f)}
 </style>
 <!-- /seo:head -->
 <!-- seo:jsonld -->

@@ -98,17 +98,17 @@ T = {
 }
 
 CSS = """<style id="seo-css">
-.seo-ov{margin-top:24px;background:var(--card,#fff);border:1px solid var(--line,#d9e2e5);border-radius:var(--r,10px);padding:4px 16px}
-.seo-ov>summary{cursor:pointer;padding:10px 0;font-weight:700;color:var(--accent,#0f7c80)}
+.seo-ov{margin-top:24px;background:var(--card,#fff);border:1px solid var(--line,#e6e1e1);border-radius:var(--r,10px);padding:4px 16px}
+.seo-ov>summary{cursor:pointer;padding:10px 0;font-weight:700;color:var(--accent,#c8202f)}
 .seo-ov h2{font-size:17px;margin:6px 0 4px}.seo-ov h3{font-size:15px;margin:16px 0 6px}
-.seo-ov p{font-size:13px;color:var(--muted,#5d6f78);margin:0 0 8px;max-width:80ch}
+.seo-ov p{font-size:13px;color:var(--muted,#5c5c5c);margin:0 0 8px;max-width:80ch}
 .seo-tw{overflow-x:auto;margin:0 0 12px}
 .seo-ov table{border-collapse:collapse;font-size:12.5px;width:100%;min-width:760px}
-.seo-ov th,.seo-ov td{border-bottom:1px solid var(--line,#d9e2e5);padding:6px 8px;text-align:left;vertical-align:top}
-.seo-ov th{background:var(--accent-l,#e3f2f2);font-weight:700}
+.seo-ov th,.seo-ov td{border-bottom:1px solid var(--line,#e6e1e1);padding:6px 8px;text-align:left;vertical-align:top}
+.seo-ov th{background:var(--accent-l,#fdecee);font-weight:700}
 .seo-ov td.n{white-space:nowrap;font-variant-numeric:tabular-nums}
-.seo-about{font-size:12.5px;color:var(--muted,#5d6f78);margin:16px 0 0;max-width:90ch}
-.seo-about a{color:var(--accent,#0f7c80)}
+.seo-about{font-size:12.5px;color:var(--muted,#5c5c5c);margin:16px 0 0;max-width:90ch}
+.seo-about a{color:var(--accent,#c8202f)}
 </style>"""
 
 esc = html.escape
