@@ -54,10 +54,11 @@ ORG = {
     "brand": [{"@type": "Brand", "name": "ForCoTech"}, {"@type": "Brand", "name": "Silent-Mode"}],
     "url": "https://www.silent-mode.com",
     "email": "info@forcotech.com",
+    "vatID": "IT03833150133",
     "founder": {"@type": "Person", "name": "Romolo Vicari"},
     "address": {"@type": "PostalAddress", "streetAddress": "Via Trento 22", "postalCode": "23875",
                 "addressLocality": "Osnago", "addressRegion": "LC", "addressCountry": "IT"},
-    "sameAs": ["https://www.forcotech.com", "https://github.com/Forcotech"],
+    "sameAs": ["https://forcotech.github.io/", "https://www.forcotech.com", "https://github.com/Forcotech"],
     "knowsAbout": ["Schallhauben", "Schallschutzhauben für Wärmepumpen", "Schalleinhausung Kälteanlagen",
                    "VRF/VRV-Außengeräte", "PV-Wechselrichter", "R290", "TA Lärm", "HSA3",
                    "acoustic enclosures", "noise control for heat pumps and chillers"],
@@ -77,7 +78,7 @@ T = {
         prodVrf="ForCoTech Schallhaube {c} für {mf} {s}", prodPv="ForCoTech Schallhaube {c} für {mf} {s}",
         prodDesc="Passend für {m}.", catName="Standardhauben VRF/VRV", catNamePv="Schallhauben PV-Wechselrichter",
         about="Über ForCoTech",
-        aboutT="ForCoTech ist die Schallhauben-Marke von Silent Engineering di Romolo Vicari (Osnago, Italien), gefertigt mit Absora-Technologie. Die Hauben werden projektbezogen ausgelegt – Akustik, Druckverlust und Statik, u. a. mittels CFD-Simulation – und sind für Wärmepumpen, Kaltwassersätze, Rückkühler, VRF/VRV-Außengeräte und PV-Wechselrichter erhältlich. Kontakt: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a> · <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
+        aboutT="ForCoTech ist die Schallhauben-Marke von Silent Engineering di Romolo Vicari (Osnago, Italien), gefertigt mit Absora-Technologie. Die Hauben werden projektbezogen ausgelegt – Akustik, Druckverlust und Statik, u. a. mittels CFD-Simulation – und sind für Wärmepumpen, Kaltwassersätze, Rückkühler, VRF/VRV-Außengeräte und PV-Wechselrichter erhältlich. Mehr über uns: <a href=\"https://forcotech.github.io/\">forcotech.github.io</a> · Kontakt: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a> · <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
     ),
     "en": dict(
         ov="Catalogue overview as a table", ovNote="All budget prices net, excl. installation, VAT and freight. Binding quotation after review.",
@@ -92,7 +93,7 @@ T = {
         prodVrf="ForCoTech acoustic enclosure {c} for {mf} {s}", prodPv="ForCoTech acoustic enclosure {c} for {mf} {s}",
         prodDesc="Fits {m}.", catName="Standard enclosures VRF/VRV", catNamePv="Acoustic enclosures PV inverters",
         about="About ForCoTech",
-        aboutT="ForCoTech is the acoustic enclosure brand of Silent Engineering di Romolo Vicari (Osnago, Italy), built with Absora technology. Enclosures are engineered per project – acoustics, pressure drop and structural design, including CFD simulation – for heat pumps, chillers, dry coolers, VRF/VRV outdoor units and PV inverters. Contact: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a> · <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
+        aboutT="ForCoTech is the acoustic enclosure brand of Silent Engineering di Romolo Vicari (Osnago, Italy), built with Absora technology. Enclosures are engineered per project – acoustics, pressure drop and structural design, including CFD simulation – for heat pumps, chillers, dry coolers, VRF/VRV outdoor units and PV inverters. More about us: <a href=\"https://forcotech.github.io/en/\">forcotech.github.io</a> · Contact: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a> · <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
     ),
 }
 
