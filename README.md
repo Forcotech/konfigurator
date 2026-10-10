@@ -9,3 +9,13 @@ Standardprodukte PV-Wechselrichter: https://forcotech.github.io/konfigurator/pv/
 Alle Rechte vorbehalten. Konfigurator, Berechnungsverfahren und Gestaltung sind urheberrechtlich geschützt.
 Jede Vervielfältigung, Bearbeitung, Weitergabe oder Nutzung des Codes – ganz oder in Teilen – ist ohne
 schriftliche Genehmigung untersagt.
+
+## Suchmaschinen / KI-Lesbarkeit
+
+Titel, Meta-Beschreibungen, strukturierte Daten (JSON-LD), die Katalog-Übersicht als Tabelle und
+`sitemap.xml` werden aus den gerenderten Seiten erzeugt. Nach jeder Änderung an Katalog oder Texten neu erzeugen:
+
+    node tools/extract_catalog.mjs /tmp/catalog-data.json
+    python3 tools/seo_build.py /tmp/catalog-data.json
+
+Der geschützte Rechen-Code wird dabei nicht verändert.
