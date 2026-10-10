@@ -3,6 +3,7 @@
 Live (Deutsch): https://forcotech.github.io/konfigurator/
 Live (English): https://forcotech.github.io/konfigurator/en/
 Standardprodukte VRF: https://forcotech.github.io/konfigurator/vrf/ · https://forcotech.github.io/konfigurator/en/vrf/
+Standardprodukte PV-Wechselrichter: https://forcotech.github.io/konfigurator/pv/ · https://forcotech.github.io/konfigurator/en/pv/
 
 © Silent-Engineering di Romolo Vicari · Via Trento 22 · 23875 Osnago (LC) · Italien.
 Alle Rechte vorbehalten. Konfigurator, Berechnungsverfahren und Gestaltung sind urheberrechtlich geschützt.
