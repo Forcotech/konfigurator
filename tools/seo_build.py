@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ergänzt die sechs Seiten um Inhalte, die Suchmaschinen und KI-Systeme ohne JavaScript lesen können.
+"""Ergänzt die acht Seiten um Inhalte, die Suchmaschinen und KI-Systeme ohne JavaScript lesen können.
 
 - Titel, Meta-Beschreibung, Canonical, hreflang, Open Graph
 - strukturierte Daten (JSON-LD): Organisation, Katalog als Produktliste
@@ -44,6 +44,12 @@ PAGES = {
     "en/pv/index.html": dict(lang="en", path="en/pv/", alt="pv/", kind="pv",
         title="Acoustic Enclosures for PV Inverters – Huawei, SMA, Fronius, Sungrow, SolarEdge and more | ForCoTech",
         desc="Acoustic enclosures for PV inverters: wall-mounted front enclosures and free-standing housings with mounting shelter, for 1 to 5 units, approx. −15 or −20 dB(A), with budget prices."),
+    "grossanlagen/index.html": dict(lang="de", path="grossanlagen/", alt="en/grossanlagen/", kind="ga",
+        title="Schallhauben für Großwärmepumpen, Kaltwassersätze und Gewerbekälte – Daikin, Aermec, Swegon, Carrier, Trane u. a. | ForCoTech",
+        desc="Schallhauben für Großwärmepumpen, Kaltwassersätze und Verflüssigungssätze von Daikin, Aermec, Swegon, Carrier, Trane, Viessmann, Mitsubishi Electric/Climaveneta u. a. – Aufstellung auf Fundament oder Stahlrahmen, ca. −15 bzw. −20 dB(A), mit Richtpreisen."),
+    "en/grossanlagen/index.html": dict(lang="en", path="en/grossanlagen/", alt="grossanlagen/", kind="ga",
+        title="Acoustic Enclosures for Large Heat Pumps, Chillers and Commercial Refrigeration – Daikin, Aermec, Swegon, Carrier, Trane and more | ForCoTech",
+        desc="Acoustic enclosures for large heat pumps, chillers and condensing units from Daikin, Aermec, Swegon, Carrier, Trane, Viessmann, Mitsubishi Electric/Climaveneta and more – on foundation or steel frame, approx. −15 or −20 dB(A), with budget prices."),
 }
 
 ORG = {
@@ -77,6 +83,9 @@ T = {
         pvL="Für jede Wechselrichter-Baureihe gibt es eine Vorbau-Haube für Wandmontage und ein freistehendes Gehäuse mit Montage-Shelter, jeweils für 1 bis 5 Wechselrichter.",
         prodVrf="ForCoTech Schallhaube {c} für {mf} {s}", prodPv="ForCoTech Schallhaube {c} für {mf} {s}",
         prodDesc="Passend für {m}.", catName="Standardhauben VRF/VRV", catNamePv="Schallhauben PV-Wechselrichter",
+        gaH="Schallhauben für Wärmepumpen, Kaltwassersätze und Gewerbekälte – alle Geräte",
+        gaL="Haubenmaße und Preise für ein Gerät auf Fundament mit Schwingungsdämpfern (120 mm). Aufstellung auf Stahlrahmen und 2 oder 3 Geräte unter einer Haube sind möglich; andere Hersteller über die manuelle Eingabe.",
+        devga="Gerät (L × B × H)", prodGa="ForCoTech Schallhaube {c} für {mf} {s}", catNameGa="Schallhauben Großanlagen",
         about="Über ForCoTech",
         aboutT="ForCoTech ist die Schallhauben-Marke von Silent Engineering di Romolo Vicari (Osnago, Italien), gefertigt mit Absora-Technologie. Die Hauben werden projektbezogen ausgelegt – Akustik, Druckverlust und Statik, u. a. mittels CFD-Simulation – und sind für Wärmepumpen, Kaltwassersätze, Rückkühler, VRF/VRV-Außengeräte und PV-Wechselrichter erhältlich. Mehr über uns: <a href=\"https://forcotech.github.io/\">forcotech.github.io</a> · Kontakt: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a> · <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
     ),
@@ -92,6 +101,9 @@ T = {
         pvL="For each inverter series there is a front enclosure for wall mounting and a free-standing housing with mounting shelter, each for 1 to 5 inverters.",
         prodVrf="ForCoTech acoustic enclosure {c} for {mf} {s}", prodPv="ForCoTech acoustic enclosure {c} for {mf} {s}",
         prodDesc="Fits {m}.", catName="Standard enclosures VRF/VRV", catNamePv="Acoustic enclosures PV inverters",
+        gaH="Acoustic enclosures for heat pumps, chillers and commercial refrigeration – all units",
+        gaL="Enclosure dimensions and prices for one unit on a foundation with anti-vibration mounts (120 mm). Steel frame installation and 2 or 3 units under one enclosure are available; other manufacturers via manual entry.",
+        devga="Unit (L × W × H)", prodGa="ForCoTech acoustic enclosure {c} for {mf} {s}", catNameGa="Acoustic enclosures large equipment",
         about="About ForCoTech",
         aboutT="ForCoTech is the acoustic enclosure brand of Silent Engineering di Romolo Vicari (Osnago, Italy), built with Absora technology. Enclosures are engineered per project – acoustics, pressure drop and structural design, including CFD simulation – for heat pumps, chillers, dry coolers, VRF/VRV outdoor units and PV inverters. More about us: <a href=\"https://forcotech.github.io/en/\">forcotech.github.io</a> · Contact: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a> · <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
     ),
@@ -230,6 +242,26 @@ def pv_section(d, cfg, t):
     return "".join(body), list(prods.values())
 
 
+def ga_section(d, cfg, t):
+    rows, prods = [], []
+    for a, b in zip(d["std"], d["pro"]):
+        if not a.get("price"):  # projektbezogene Baureihen / steckerfertige Geräte
+            rows.append(f"<tr><td>{esc(a['mf'])}</td><td>{esc(a['series'])}</td>"
+                        f"<td>{esc(', '.join(a['models']))}</td><td colspan=5>{esc(a.get('note', ''))}</td></tr>")
+            continue
+        rows.append("<tr>" + "".join([
+            f"<td>{esc(a['mf'])}</td>", f"<td>{esc(a['series'])}</td>", f"<td>{esc(', '.join(a['models']))}</td>",
+            f"<td class=n>{esc(spec(a, 'Gerät (L × B × H)', 'Unit (L × W × H)'))}</td>",
+            f"<td class=n>{esc(spec(a, 'Haube (L × B × H)', 'Enclosure (L × W × H)'))}</td>",
+            f"<td class=n>{esc(a['price'])}</td>", f"<td class=n>{esc(b['price'])}</td>",
+            f"<td class=n>{esc(base_code(a['code']))}</td>"]) + "</tr>")
+        prods.append(product(t, t["prodGa"], a, num(a["price"]), num(b["price"]), base_code(a["code"])))
+    head = "".join(f"<th>{esc(h)}</th>" for h in [t["mf"], t["series"], t["models"], t["devga"], t["hood"], t["std"], t["pro"], t["code"]])
+    body = (f"<h2>{esc(t['gaH'])}</h2><p>{esc(t['gaL'])} {esc(t['ovNote'])} {STAND[cfg['lang']]}.</p>"
+            f"<div class=seo-tw><table><thead><tr>{head}</tr></thead><tbody>{''.join(rows)}</tbody></table></div>")
+    return body, prods
+
+
 def replace_block(src, name, block, anchor_re, before=True):
     """Ersetzt einen bestehenden <!-- seo:name --> Block oder fügt ihn am Anker ein."""
     pat = re.compile(rf"<!-- seo:{name} -->.*?<!-- /seo:{name} -->\n?", re.S)
@@ -266,7 +298,9 @@ def build(data):
             section, prods = vrf_section(d, cfg, t)
         elif cfg["kind"] == "pv":
             section, prods = pv_section(d, cfg, t)
-        cat = t["catName"] if cfg["kind"] == "vrf" else t["catNamePv"]
+        elif cfg["kind"] == "ga":
+            section, prods = ga_section(d, cfg, t)
+        cat = {"vrf": t["catName"], "ga": t["catNameGa"]}.get(cfg["kind"], t["catNamePv"])
         src = replace_block(src, "jsonld", jsonld(cfg, prods, cat), r"</head>")
         about = f'<p class="seo-about"><b>{esc(t["about"])}:</b> {t["aboutT"]}</p>'
         if section:
@@ -284,7 +318,7 @@ def build(data):
     urls = []
     for f, cfg in PAGES.items():
         other = BASE + cfg["alt"]
-        urls.append(f"  <url><loc>{BASE + cfg['path']}</loc><lastmod>2026-10-10</lastmod>"
+        urls.append(f"  <url><loc>{BASE + cfg['path']}</loc><lastmod>2026-10-11</lastmod>"
                     f'<xhtml:link rel="alternate" hreflang="{"en" if cfg["lang"] == "de" else "de"}" href="{other}"/></url>')
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'

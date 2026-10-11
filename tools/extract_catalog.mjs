@@ -1,4 +1,4 @@
-// Liest die gerenderten Kataloge (VRF/PV, DE/EN) aus – Eingabe fuer seo_build.py.
+// Liest die gerenderten Kataloge (VRF/PV/Großanlagen, DE/EN) aus – Eingabe fuer seo_build.py.
 // Aufruf: node tools/extract_catalog.mjs /tmp/catalog-data.json   (benoetigt playwright)
 import { chromium } from '/opt/npm-tools/node_modules/playwright/index.mjs';
 import fs from 'fs';
@@ -15,13 +15,13 @@ const cards = () => [...document.querySelectorAll('#grid article.card')].map(c=>
     note:c.querySelector('.price')?'':[...c.querySelectorAll('p')].map(x=>x.textContent.trim()).join(' ')};
 });
 async function click(pg, sel){ await pg.click(sel); await pg.waitForTimeout(300); }
-for (const p of ['vrf/index.html','en/vrf/index.html','pv/index.html','en/pv/index.html','index.html','en/index.html']){
+for (const p of ['vrf/index.html','en/vrf/index.html','pv/index.html','en/pv/index.html','grossanlagen/index.html','en/grossanlagen/index.html','index.html','en/index.html']){
   const pg = await b.newPage();
   await pg.goto('file://'+ROOT+'/'+p); await pg.waitForTimeout(800);
   const r = {};
   r.dataT = await pg.evaluate(()=>{const o={}; document.querySelectorAll('[data-t]').forEach(e=>{o[e.dataset.t]=e.innerHTML;}); return o;});
   r.title = await pg.title();
-  if (p.includes('vrf')) {
+  if (p.includes('vrf') || p.includes('grossanlagen')) {
     r.std = await pg.evaluate(cards);
     await click(pg,'button[data-v="pro"]'); r.pro = await pg.evaluate(cards);
   }

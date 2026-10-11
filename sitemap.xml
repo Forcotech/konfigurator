@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://forcotech.github.io/konfigurator/</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/konfigurator/en/"/></url>
-  <url><loc>https://forcotech.github.io/konfigurator/en/</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/konfigurator/"/></url>
-  <url><loc>https://forcotech.github.io/konfigurator/vrf/</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/konfigurator/en/vrf/"/></url>
-  <url><loc>https://forcotech.github.io/konfigurator/en/vrf/</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/konfigurator/vrf/"/></url>
-  <url><loc>https://forcotech.github.io/konfigurator/pv/</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/konfigurator/en/pv/"/></url>
-  <url><loc>https://forcotech.github.io/konfigurator/en/pv/</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/konfigurator/pv/"/></url>
+  <url><loc>https://forcotech.github.io/konfigurator/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/konfigurator/en/"/></url>
+  <url><loc>https://forcotech.github.io/konfigurator/en/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/konfigurator/"/></url>
+  <url><loc>https://forcotech.github.io/konfigurator/vrf/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/konfigurator/en/vrf/"/></url>
+  <url><loc>https://forcotech.github.io/konfigurator/en/vrf/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/konfigurator/vrf/"/></url>
+  <url><loc>https://forcotech.github.io/konfigurator/pv/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/konfigurator/en/pv/"/></url>
+  <url><loc>https://forcotech.github.io/konfigurator/en/pv/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/konfigurator/pv/"/></url>
+  <url><loc>https://forcotech.github.io/konfigurator/grossanlagen/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/konfigurator/en/grossanlagen/"/></url>
+  <url><loc>https://forcotech.github.io/konfigurator/en/grossanlagen/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/konfigurator/grossanlagen/"/></url>
 </urlset>
